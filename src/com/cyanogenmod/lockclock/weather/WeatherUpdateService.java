@@ -193,7 +193,7 @@ public class WeatherUpdateService extends Service {
                 String locationProvider = lm.getBestProvider(sLocationCriteria, true);
                 if (TextUtils.isEmpty(locationProvider)) {
                     Log.e(TAG, "No available location providers matching criteria.");
-                } else if (PackageManagerUtils.isAppInstalled(mContext, "com.google.android.gms()
+                } else if (PackageManagerUtils.isAppInstalled(mContext, "com.google.android.gms")
                         && locationProvider.equals(LocationManager.GPS_PROVIDER)) {
                     // Since Google Play services is available,
                     // let's conserve battery power and not depend on the device's GPS.
