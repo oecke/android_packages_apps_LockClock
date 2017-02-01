@@ -13,3 +13,10 @@
 
 -dontwarn cyanogenmod.**
 -keep class cyanogenmod.app.** { *; }
+
+-# Needed when building against the Marshmallow SDK
+ --dontwarn org.apache.http.**
+ --dontwarn android.support.**
+-# No webkit-related build errors
+ --keep public class android.net.http.SslError
+ --keep public class android.webkit.WebViewClient
